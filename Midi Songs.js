@@ -1,11 +1,10 @@
-
 //Force this app to portrait mode.
 cfg.Portrait
 app.LoadPlugin( "Utils" );
 
 //Include scripts for each page.
-include( "Home.js" )
-include( "Settings.js" )
+app.Include( "Home.js" )
+app.Include( "Settings.js" )
 
 //Main class for the app
 class Main extends App
@@ -27,7 +26,7 @@ class Main extends App
         this.settings = new Settings( this )
 
         //Create layout for pages and load home page.
-        this.layPage = ui.addLayout( this.layMain, "frame", "", 1, 0.8 )
+        this.layPage = ui.addLayout( this.layMain, "card", "", 1, 0.8 )
         this.home.show()
        
   	
